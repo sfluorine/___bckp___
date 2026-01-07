@@ -1,0 +1,20 @@
+[language-server.clangd]
+command = "clangd"
+args = ["--header-insertion=never"]
+
+[[language]]
+name = "c"
+auto-format = true
+file-types = ["h", "c"]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format" }
+language-servers = ["clangd"]
+
+
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+file-types = ["h", "cpp", "cc", "c++", "cxx"]
+formatter = { command = "clang-format" }
+language-servers = ["clangd"]
